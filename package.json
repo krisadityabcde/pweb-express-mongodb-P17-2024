@@ -1,7 +1,7 @@
 {
   "name": "pweb-express-mongodb-p17-2024",
   "version": "1.0.0",
-  "description": "Anggota:\r - Rafael Ega Krisaditya/5027231025\r - Nama/NRP\r - Nama/NRP",
+  "description": "Anggota:\r - Rafael Ega Krisaditya/5027231025\r - Nama/NRP\r - Veri Rahman/5027231088",
   "main": "index.js",
   "scripts": {
     "build": "tsc --build",
