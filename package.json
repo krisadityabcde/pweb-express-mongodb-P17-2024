@@ -1,0 +1,16 @@
+{
+  "name": "pweb-express-mongodb-p17-2024",
+  "version": "1.0.0",
+  "description": "Anggota:\r - Rafael Ega Krisaditya/5027231025\r - Nama/NRP\r - Nama/NRP",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node ./dist/index.js",
+    "start:dev": "nodemon ./src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.6.3"
+  }
+}
