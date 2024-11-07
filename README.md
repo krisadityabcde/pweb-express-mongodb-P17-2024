@@ -3,4 +3,4 @@
 Anggota:
 - Rafael Ega Krisaditya/5027231025
 - Nama/NRP
-- Nama/NRP
+- Veri Rahman/5027231088
