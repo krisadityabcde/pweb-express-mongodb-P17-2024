@@ -10,7 +10,7 @@ Langkah kerja:
 2. `npm install express`
 3. `npm install -D typescript @types/node @types/express ts-node nodemon`
 4. `npx tsc --init`
-5. `npm install mongoose`
+5. `npm install mongoose bcrypt jsonwebtoken`
 6. `npm i --save-dev @types/bcrypt`
 7. `npm i --save-dev @types/jsonwebtoken`
 8. Buat file `.env`
