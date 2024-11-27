@@ -25,7 +25,7 @@ app.get("/", (_: Request, res: Response) => {
 });
 
 app.use('/health', healthRouter);
-app.use('/auth', authRouter);
+//app.use('/auth', authRouter);
 app.use('/book', bookRouter);
 app.use('/mechanism', mechanismRouter);
 
