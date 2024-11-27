@@ -9,7 +9,7 @@ import mechanismRouter from './routes/mechanism.route';
 dotenv.config();
 
 const app: Application = express();
-const PORT: number = parseInt(process.env.PORT || '4000');
+const PORT: number = parseInt(process.env.PORT || '1717');
 const MONGODB_URI: string = process.env.MONGODB_URI || '';
 
 app.use(express.json());
