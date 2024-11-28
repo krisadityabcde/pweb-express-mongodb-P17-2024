@@ -5,6 +5,7 @@ import bookRouter from './routes/book.route';
 import healthRouter from './routes/health.route';
 import authRouter from './routes/auth.route';
 import mechanismRouter from './routes/mechanism.route';
+const cors = require('cors');
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ const PORT: number = parseInt(process.env.PORT || '1717');
 const MONGODB_URI: string = process.env.MONGODB_URI || '';
 
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (_: Request, res: Response) => {
   res.status(200).json({
