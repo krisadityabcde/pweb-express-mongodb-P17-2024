@@ -2,19 +2,18 @@ import express, { Application, Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import bookRouter from './routes/book.route';
-import healthRouter from './routes/health.route';
 import authRouter from './routes/auth.route';
 import mechanismRouter from './routes/mechanism.route';
-const cors = require('cors');
+import cors from "cors";
 
 dotenv.config();
 
 const app: Application = express();
-const PORT: number = parseInt(process.env.PORT || '1717');
+const PORT: number = parseInt(process.env.PORT || '4000');
 const MONGODB_URI: string = process.env.MONGODB_URI || '';
 
+app.use(cors())
 app.use(express.json());
-app.use(cors());
 
 app.get("/", (_: Request, res: Response) => {
   res.status(200).json({
@@ -26,8 +25,7 @@ app.get("/", (_: Request, res: Response) => {
   });
 });
 
-app.use('/health', healthRouter);
-//app.use('/auth', authRouter);
+app.use('/auth', authRouter);
 app.use('/book', bookRouter);
 app.use('/mechanism', mechanismRouter);
 
@@ -57,13 +55,13 @@ const startServer = async () => {
     }
 
     await mongoose.connect(MONGODB_URI);
-    console.log('📦 Connected to MongoDB');
+    console.log('Connected to MongoDB');
     
     app.listen(PORT, () => {
-      console.log(`⚡️[server]: Server is running on Port ${PORT}`);
+      console.log(`Server is running on Port ${PORT}`);
     });
   } catch (error) {
-    console.error('❌ Server failed to start:', error);
+    console.error('Server failed to start:', error);
     process.exit(1);
   }
 };
